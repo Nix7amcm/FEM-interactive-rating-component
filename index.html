@@ -2,13 +2,12 @@
 <html lang="en">
   <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   
   <title>Frontend Mentor | Interactive rating component</title>
   
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/root.css">
 
@@ -26,7 +25,7 @@
 </head>
   <body>
 
-    <main>
+    <main data-wrapper>
 
       <img
         src="images/icon-star.svg"
@@ -132,7 +131,7 @@
     <template data-template> <!--<---stays hidden from view-->
 
       <p>
-        You selected <!-- Add rating here --> out of 5
+        You selected {{ rating }} out of 5
       </p>
 
       <h1>Thank you!</h1>
