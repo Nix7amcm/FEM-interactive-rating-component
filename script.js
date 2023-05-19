@@ -35,7 +35,7 @@ function handleSubmit ( event ) {
 }
 
 function playSound () {
-  const audio = new Audio( "sounds/multimedia_max_min_interface_sound_whoosh_max.mp3" );
+  const audio = new Audio( "sounds/zapsplat_multimedia_ui__short_swipe_whoosh_002_71501.mp3" );
 
   audio.volume = 0.2;
   audio.play();
