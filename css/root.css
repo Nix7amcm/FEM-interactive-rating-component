@@ -8,12 +8,12 @@
   --white: hsl(0, 0%, 100%);
   --rating-grey: hsl(216, 12%, 54%);
   --orange: hsl(25, 97%, 53%);
-  
+
   --link: hsl(350, 100%, 88%);
   --link-active: hsl(25, 97%, 53%);
   --link-visited: hsl(271, 76%, 53%);
 
-  --default-fontsize: .9375rem;
+  --default-fontsize: clamp(14px, 3vw, .9375rem);
 
   --default-font: 'Overpass', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /*::::: good fallback option from Tailwind that covers all operating systems: 

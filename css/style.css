@@ -10,8 +10,7 @@ body {
   /*<---^ take up entire screen height (replaces/alternative to min-height: 100vh */
   font-family: var(--default-font);
   font-size: var(--default-fontsize);
-  /*::::: shorthand (font/line-height font-family): 
-  /* font: 15px/1.6 Overpass, sans-serif; */
+  /*::::: shorthand (font/line-height font-family): font: 15px/1.6 Overpass, sans-serif; */
   background-color: var(--bg-vdkblue);
 }
 
@@ -21,7 +20,8 @@ body {
 h1 {
   margin-bottom: .4375rem;
   color: var(--white);
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 5vw, 1.8125rem);
+  /*<---^ clamp(min, preferred(if not min/max), max) */
 }
 
 p {
@@ -54,8 +54,8 @@ p {
 main {
   background: var(--card-bg-gradient);
   max-width: 25.75rem;
-  width: 100%;
-  padding: 2rem;
+  width: calc(100% - 2rem);
+  padding: clamp(1.5rem, 5vw, 2rem);
   border-radius: 1.875rem;
 }
 
@@ -111,7 +111,7 @@ img.logo {
 }
 
 .radio-input .control {
-  --size: 3.1875rem;
+  --size: clamp(2.625rem, 15vw, 3.185rem);
   display: block;
   width: var(--size);
   height: var(--size);
@@ -168,11 +168,11 @@ img.phone {
 /*_____ KEYFRAMES _____*/
 
 .animate-out {
-  animation: animate-out .2s ease-out both;
+  animation: animate-out .15s ease-out both;
 }
 
 .animate-in {
-  animation: animate-in .2s ease-out both;
+  animation: animate-in .15s ease-out both;
 }
 
 @keyframes animate-out {
@@ -184,7 +184,7 @@ img.phone {
   to {
     opacity: 0;
     transform: translateX(-3rem);
-    /*<---^ shorthand is (not fully supported) translate: -3rem;*/
+    /*<---^ shorthand (not fully supported): translate: -3rem;*/
   }
 }
 
@@ -192,14 +192,14 @@ img.phone {
   from {
     opacity: 0;
     transform: translateX(3rem);
-    /*<---^ shorthand is (not fully supported) translate: 3rem;*/
+    /*<---^ shorthand (not fully supported): translate: 3rem;*/
 
   }
 
   to {
     opacity: 1;
     transform: translateX(0);
-    /*<---^ shorthand is (not fully supported) translate: 0;*/
+    /*<---^ shorthand (not fully supported): translate: 0;*/
   }
 }
 
