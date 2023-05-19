@@ -61,6 +61,7 @@ Users should be able to:
 - CSS Grid
 - JS
 
+
 ### Useful resources
 
 - [Tailwind.css](https://tailwindcss.com/) - This helped me add [fallback fonts](https://tailwindcss.com/docs/font-family) to cover all browsers, and the [sr-only](https://tailwindcss.com/docs/screen-readers#screen-reader-only-elements) class styles for accessibility.
@@ -71,8 +72,8 @@ Users should be able to:
 ## Author
 
 - Website - [Nix7amcm](https://github.com/Nix7amcm)
-- LinkedIn - [amcm-8807](https://www.linkedin.com/in/amcm-8807/)
 - Frontend Mentor - [@Nix7amcm](https://www.frontendmentor.io/profile/Nix7amcm)
+- LinkedIn - [amcm-8807](https://www.linkedin.com/in/amcm-8807/)
 
 ---
 
