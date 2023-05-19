@@ -1,0 +1,227 @@
+@import url(reset.css);
+@import url(root.css);
+
+/*_____ GLOBAL STYLES _____*/
+
+body {
+  display: grid;
+  place-items: center;
+  min-block-size: 100vh;
+  /*<---^ take up entire screen height (replaces/alternative to min-height: 100vh */
+  font-family: var(--default-font);
+  font-size: var(--default-fontsize);
+  /*::::: shorthand (font/line-height font-family): 
+  /* font: 15px/1.6 Overpass, sans-serif; */
+  background-color: var(--bg-vdkblue);
+}
+
+
+/*_____ TYPOGRAPHY _____*/
+
+h1 {
+  margin-bottom: .4375rem;
+  color: var(--white);
+  font-size: 1.75rem;
+}
+
+p {
+  color: var(--text-lgrey);
+}
+
+
+/*_____ CLASSES _____*/
+
+.sr-only {
+  /*@ https://tailwindcss.com/docs/screen-readers#screen-reader-only-elements */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/*_____ LAYOUT _____*/
+
+main {
+  background: var(--card-bg-gradient);
+  max-width: 25.75rem;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1.875rem;
+}
+
+.logo-wrap {
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.875rem;
+  --size: 3rem;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--circle-bg);
+  border-radius: 50%;
+}
+
+img.logo {
+  --size: 1rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+
+/*_____ FORM _____*/
+
+.button {
+  --size: 2.8125rem;
+  height: var(--size);
+  width: 100%;
+  border-radius: var(--size);
+  border: unset;
+  background-color: var(--orange);
+  color: var(--white);
+  font: 3.125rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  appearance: none;
+  /*<---^ maintains consistency across all browsers, stops them applying their own styles */
+  transition: background-color .15s linear, color .15s linear;
+}
+
+.button:is(:hover, :focus-visible) {
+  /*<---^ 'is' groups selectors*/
+  background-color: var(--white);
+  color: var(--orange);
+  outline: none;
+}
+
+.rating-group {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1.5rem 2rem;
+}
+
+.radio-input .control {
+  --size: 3.1875rem;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: var(--circle-bg);
+  color: var(--rating-grey);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: var(--size);
+  cursor: pointer;
+  transition: background-color .15s linear, color .15s linear;
+}
+
+.radio-input input:checked + .control {
+  background-color: var(--rating-grey);
+  color: var(--white);
+}
+
+.radio-input:hover .control,
+.radio-input input:focus + .control {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+
+/*_____ TEMPLATE _____*/
+
+
+.phone-wrap {
+  display: grid;
+  place-items: center;
+}
+
+img.phone {
+  width: 10.125rem;
+  height: 6.75rem;
+}
+
+.rating-selected {
+  --size: 2rem;
+  height: var(--size);
+  width: max-content;
+  margin-inline: auto;
+  margin-block: 2rem;
+  padding-inline: 1.25rem;
+  background-color: var(--circle-bg);
+  color: var(--orange);
+  border-radius: var(--size);
+  line-height: var(--size);
+}
+
+
+/*_____ KEYFRAMES _____*/
+
+.animate-out {
+  animation: animate-out .2s ease-out both;
+}
+
+.animate-in {
+  animation: animate-in .2s ease-out both;
+}
+
+@keyframes animate-out {
+  from {
+    opacity: 1;
+
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-3rem);
+    /*<---^ shorthand is (not fully supported) translate: -3rem;*/
+  }
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+    /*<---^ shorthand is (not fully supported) translate: 3rem;*/
+
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    /*<---^ shorthand is (not fully supported) translate: 0;*/
+  }
+}
+
+
+/*_____ FOOTER _____*/
+
+
+footer {
+  color: var(--white);
+  font-size: .6875rem;
+  text-align: center;
+}
+
+footer a:link {
+  color: var(--link);
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: var(--link-visited);
+}
+
+footer a:is(:hover, :focus-visible, :active) {
+  color: var(--link-active);
+}

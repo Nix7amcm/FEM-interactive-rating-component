@@ -8,8 +8,9 @@
   
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,125 +19,147 @@
       
   <script src="script.js" defer></script> 
   
-  <style>
-    .attribution { font-size: 11px; radio-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
   <body>
 
-    <main data-wrapper>
+    <main>
 
-      <img
-        src="images/icon-star.svg"
-        alt="star icon"
-        width="48"
-        height="48"
-      >
+      <div data-wrapper>
 
-      <h1>How did we do?</h1>
-
-      <p>
-        Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!
-      </p>
-
-
-      <form data-form>
-
-        <label>
-          <input
-            type="radio"
-            name="rating"
-            value="1"
+        <header class="logo-wrap">
+          <img
+            src="images/icon-star.svg"
+            alt="logo"
+            class="logo"
           >
-          <span>
-            1
-            <span class="sr-only">
-              stars
-            </span>
-          </span>
-        </label>
+          </svg>
+        </header>
 
-        <label>
-          <input
-            type="radio"
-            name="rating"
-            value="2"
+        <h1>How did we do?</h1>
+
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+
+        <form data-form>
+
+          <div class="rating-group">
+            <label class="radio-input">
+              <input
+                type="radio"
+                name="rating"
+                value="1"
+                class="sr-only"
+              >
+              <span class="control">
+                1
+                <span class="sr-only">
+                  stars
+                </span>
+              </span>
+            </label>
+
+            <label class="radio-input">
+              <input
+                type="radio"
+                name="rating"
+                value="2"
+                class="sr-only"
+              >
+              <span class="control">
+                2
+                <span class="sr-only">
+                  stars
+                </span>
+              </span>
+            </label>
+
+            <label class="radio-input">
+              <input
+                type="radio"
+                name="rating"
+                value="3"
+                class="sr-only"
+              >
+              <span class="control">
+                3
+                <span class="sr-only">
+                  stars
+                </span>
+              </span>
+            </label>
+
+            <label class="radio-input">
+              <input
+                type="radio"
+                name="rating"
+                value="4"
+                class="sr-only"
+              >
+              <span class="control">
+                4
+                <span class="sr-only">
+                  stars
+                </span>
+              </span>
+            </label>
+
+            <label class="radio-input">
+              <input
+                type="radio"
+                name="rating"
+                value="5"
+                class="sr-only"
+              >
+              <span class="control">
+                5
+                <span class="sr-only">
+                  stars
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            class="button"
           >
-          <span>
-            2
-            <span class="sr-only">
-              stars
-            </span>
-          </span>
-        </label>
+            Submit
+          </button>
 
-        <label>
-          <input
-            type="radio"
-            name="rating"
-            value="3"
-          >
-          <span>
-            3
-            <span class="sr-only">
-              stars
-            </span>
-          </span>
-        </label>
+        </form>
 
-        <label>
-          <input
-            type="radio"
-            name="rating"
-            value="4"
-          >
-          <span>
-            4
-            <span class="sr-only">
-              stars
-            </span>
-          </span>
-        </label>
-
-        <label>
-          <input
-            type="radio"
-            name="rating"
-            value="5"
-          >
-          <span>
-            5
-            <span class="sr-only">
-              stars
-            </span>
-          </span>
-        </label>
-
-        <button
-          type="submit"
-          class="button"
-        >
-          Submit
-        </button>
-
-      </form>
-
-
+      </div>
 
     </main>
 
 
-    <template data-template> <!--<---stays hidden from view-->
 
-      <p>
+
+    <template
+      data-template
+      class="thanks"
+    > <!--<---stays hidden from view-->
+
+      <div class="phone-wrap">
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="illustration of a phone"
+          class="phone"
+        >
+      </div>
+
+      <p class="rating-selected text-center">
         You selected {{ rating }} out of 5
       </p>
 
-      <h1>Thank you!</h1>
+      <h1 class="text-center">
+        Thank you!
+      </h1>
 
-      <p>
+      <p class="text-center">
         We appreciate you taking the time to give a rating. If you ever need more support,
         don&apos;t hesitate to get in touch!
       </p>
@@ -150,11 +173,13 @@
       <a
         href="https://www.frontendmentor.io?ref=challenge"
         target="_blank"
+        class="footer-link"
       >Frontend Mentor
       </a>.
       Coded by <a
         href="https://github.com/Nix7amcm"
         target="_blank"
+        class="footer-link"
       >Nix7amcm⚡</a>.
     </footer>
 
